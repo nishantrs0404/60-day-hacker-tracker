@@ -32,6 +32,25 @@ A premium, full-stack execution protocol designed for elite technical placement 
 
 ---
 
+## 🍴 Forking & Personalization
+
+Want to use this system for your own learning goals or share it with your community? Follow these steps:
+
+### 1. Fork the Repository
+Click the **Fork** button at the top right of this page to create your own copy of the project.
+
+### 2. Customize the Curriculum
+You can change the 60-day plan to fit any subject (e.g., Web3, Cloud Arch, or UPSC prep).
+- Open `backend/roadmap.json`.
+- Modify the `title`, `dsa_task`, `ml_task`, etc., for each day.
+- Re-run `docker-compose up --build` to automatically seed your new curriculum.
+
+### 3. Change Branding
+- Update the titles and icons in `frontend/src/app/layout.tsx` and `Navbar.tsx`.
+- Adjust theme colors in `frontend/src/app/globals.css`.
+
+---
+
 ## 🏗️ Technical Architecture
 
 ```mermaid
@@ -72,18 +91,12 @@ docker-compose up -d --build
 
 ## 📜 API Specification Summary
 
-### Authentication Layer
-| Endpoint | Method | Purpose |
-|:---|:---:|:---|
-| `/api/auth/register` | `POST` | Account creation |
-| `/api/auth/login` | `POST` | Secure JWT acquisition |
-| `/api/auth/me` | `GET` | Recursive identity check |
-
-### Execution Layer
-| Endpoint | Method | Purpose |
-|:---|:---:|:---|
-| `/api/tracker/days` | `GET` | Retrieve 60-day protocol state |
-| `/api/tracker/progress/{id}`| `POST`| Commit daily execution results |
+| Context | Endpoint | Method | Purpose |
+|:---|:---|:---:|:---|
+| Auth | `/api/auth/register` | `POST` | Account creation |
+| Auth | `/api/auth/login` | `POST` | Secure JWT acquisition |
+| Tracker | `/api/tracker/days` | `GET` | Retrieve 60-day protocol state |
+| Tracker | `/api/tracker/progress/{id}`| `POST`| Commit daily execution results |
 
 ---
 
