@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Calendar, LayoutDashboard, Settings, Code, Terminal, LogOut } from "lucide-react";
+import { Home, Calendar, LayoutDashboard, Settings, Code, Terminal, LogOut, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/lib/auth-context";
 
@@ -13,6 +13,7 @@ export default function Navbar() {
     { icon: Home, label: "Home", href: "/" },
     { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
     { icon: Calendar, label: "60-Day Plan", href: "/tracker" },
+    { icon: BookOpen, label: "Roadmap", href: "/roadmap" },
     { icon: Terminal, label: "Analytics", href: "/analytics" },
   ];
 
