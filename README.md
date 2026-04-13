@@ -12,26 +12,13 @@ A premium, full-stack execution protocol designed for elite technical placement 
 ---
 
 ## 📑 Table of Contents
-1. [🌐 Live Demo & Access](#-live-demo--access)
 2. [📸 Visual Walkthrough](#-visual-walkthrough)
 3. [💎 Core Psychology & Features](#-core-psychology--features)
 4. [🏗️ Deep System Architecture](#-deep-system-architecture)
 5. [🗄️ Database Schema Representation](#️-database-schema-representation)
 6. [📜 Detailed API Specification](#-detailed-api-specification)
 7. [💻 Local Development Guide](#-local-development-guide)
-8. [🚀 Advanced Production Deployment](#-advanced-production-deployment)
 9. [🍴 Forking & Personalization](#-forking--personalization)
-
----
-
-## 🌐 Live Demo & Access
-
-The project infrastructure is decoupled to allow maximum performance across specialized edge networks.
-
-* **Frontend Dashboard (Vercel):** `[Your Vercel URL Here]`
-* **Backend API (Hugging Face Space):** `[Your Hugging Face Space URL Here]`
-
-*(If you are the repository owner, update the links above with your live endpoints once Vercel and Hugging Face deployments are complete).*
 
 ---
 
@@ -75,9 +62,9 @@ graph TD
     end
     
     subgraph Infrastructure
-    Postgres -.-> Neon[Neon Serverless]
-    FastAPI -.-> HF[Hugging Face Docker]
-    Client -.-> Vercel[Vercel Edge Network]
+    Postgres -.-> Docker[Local Docker Volume]
+    FastAPI -.-> DockerBackend[Local Docker Container]
+    Client -.-> DockerFrontend[Local Docker Container]
     end
 ```
 
@@ -143,26 +130,6 @@ docker-compose up -d --build
 - **Frontend App**: `http://localhost:3000`
 - **Backend API**: `http://localhost:8000/docs`
 - **Database**: Port `5432`
-
----
-
-## 🚀 Advanced Production Deployment
-
-This stack features native support for high-tier serverless cloud providers.
-
-### 1. Database (Neon Serverless)
-Obtain a Postgres URI from [Neon.tech](https://neon.tech/) and safely store it.
-
-### 2. Backend API (Hugging Face Spaces)
-The root level `Dockerfile` is uniquely optimized for automated deployment on Hugging Face Spaces (a completely free, high-performance Docker host).
-- Create a new "Docker" Space on HF.
-- Connect your GitHub Repository to the Space.
-- Add Secrets in HF Settings: `DATABASE_URL`, `SECRET_KEY`, `ALGORITHM` (HS256), `ACCESS_TOKEN_EXPIRE_MINUTES`.
-
-### 3. Frontend UI (Vercel)
-- Create a New Project on [Vercel](https://vercel.com/) linked to your repository.
-- Root folder: `frontend/`.
-- Add Environment Variable: `NEXT_PUBLIC_API_URL` pointing to your deployed Backend URL (ensure it suffixes with `/api`).
 
 ---
 
