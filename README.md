@@ -1,12 +1,3 @@
----
-title: 60 Day Performance Tracker
-emoji: 🚀
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-app_port: 8000
----
-
 # 🚀 60-Day Hacker Tracker: Elite Performance System
 
 [![GitHub License](https://img.shields.io/github/license/nishantrs0404/60-day-hacker-tracker?style=flat-square&color=blue)](https://github.com/nishantrs0404/60-day-hacker-tracker/blob/main/LICENSE)
