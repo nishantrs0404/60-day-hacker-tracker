@@ -2,7 +2,23 @@
 
 A production-ready, gamified 60-day performance tracking system designed for top-tier placement preparation. Built with an elite tech stack focused on speed, aesthetic, and scalability.
 
-![Roadmap Preview](https://raw.githubusercontent.com/nishantrs0404/60-day-hacker-tracker/main/frontend/public/globe.svg) *Project uses a high-performance Neon/Vercel/Render architecture.*
+---
+
+## 📸 Visual Overview
+
+### Main Dashboard
+![Dashboard](docs/assets/dashboard.png)
+*Track your XP, Level, and Current Streaks in a sleek dark-mode glassmorphism interface.*
+
+### 60-Day Execution Plan
+![Tracker](docs/assets/tracker.png)
+*Execute your daily protocol with a locked/unlocked system that keeps you disciplined.*
+
+### Full Roadmap Preview
+![Roadmap](docs/assets/roadmap.png)
+*Browse the entire 60-day curriculum with advanced filters and search capabilities.*
+
+---
 
 ## ✨ Key Features
 
@@ -44,11 +60,8 @@ This command automatically builds the environment and seeds the 60-day curriculu
 ```text
 /
 ├── backend/            # FastAPI Project
-│   ├── app/            # Core logic (Auth, Tracker, Gamification)
-│   ├── scripts/        # Seeding logic
-│   └── roadmap.json    # The 60-day curiculum
 ├── frontend/           # Next.js 16 Project
-│   └── src/app/        # Dashboard, Roadmap, Tracker routes
+├── docs/assets/        # App screenshots
 └── docker-compose.yml  # Full-stack orchestration
 ```
 
@@ -56,11 +69,6 @@ This command automatically builds the environment and seeds the 60-day curriculu
 1. **Database**: Link a free [Neon PostgreSQL](https://neon.tech) instance.
 2. **Backend**: Deploy the `backend/` folder to [Render](https://render.com) using the provided Dockerfile.
 3. **Frontend**: Deploy the `frontend/` folder to [Vercel](https://vercel.com) with the `NEXT_PUBLIC_API_URL` pointing to your Render backend.
-
----
-
-## 🤝 Contribution
-The project is optimized for high-velocity development. Ensure all changes are containerized and verified via the Docker compose environment before pushing.
 
 ---
 *Created by [Nishant Raushan](https://github.com/nishantrs0404).*
