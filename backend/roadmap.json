@@ -1,0 +1,542 @@
+[
+  {
+    "d": 1,
+    "title": "Arrays: Prefix Sum, Kadane's | NumPy Basics | FastAPI Setup",
+    "week": 1,
+    "dsa": "3 problems: Max Subarray (Easy), Running Sum (Easy), Product Except Self (Medium)",
+    "ml": "NumPy: arrays, broadcasting, vectorized ops — 30 exercises",
+    "dev": "Install FastAPI, create project, first GET /hello endpoint, run uvicorn",
+    "deploy": "Install Docker Desktop, pull hello-world, run first container"
+  },
+  {
+    "d": 2,
+    "title": "Arrays: Two Pointer | Pandas EDA | FastAPI POST",
+    "week": 1,
+    "dsa": "3 problems: Two Sum (Easy), 3Sum (Medium), Container With Most Water (Medium)",
+    "ml": "Pandas: read_csv, df.info, df.describe, handle nulls, value_counts, groupby",
+    "dev": "POST endpoint with Pydantic model, request body validation",
+    "deploy": "Understand Dockerfile layers: FROM, RUN, COPY, CMD"
+  },
+  {
+    "d": 3,
+    "title": "Sliding Window | Data Cleaning | Pydantic + Response Models",
+    "week": 1,
+    "dsa": "3 problems: Longest Substring No Repeat (Medium), Minimum Size Subarray (Medium), Permutation in String (Medium)",
+    "ml": "Pandas: merge, apply, lambda, handle outliers, encode categoricals (LabelEncoder, get_dummies)",
+    "dev": "Pydantic response schemas, HTTP status codes, FastAPI docs (/docs)",
+    "deploy": "Build first Docker image of FastAPI app, docker run, test via curl"
+  },
+  {
+    "d": 4,
+    "title": "Strings: Anagrams, Palindromes | EDA Visualization | REST Design",
+    "week": 1,
+    "dsa": "3 problems: Valid Anagram (Easy), Group Anagrams (Medium), Longest Palindromic Substring (Medium)",
+    "ml": "Matplotlib + Seaborn: histograms, heatmaps, correlation matrix, pairplot on dataset",
+    "dev": "FastAPI router setup, separate files for routes, modular structure",
+    "deploy": "docker-compose.yml with a single service, environment variables"
+  },
+  {
+    "d": 5,
+    "title": "Binary Search Intro | Feature Engineering | Error Handling",
+    "week": 1,
+    "dsa": "3 problems: Binary Search (Easy), Find Minimum in Rotated Sorted Array (Medium), Search Insert Position (Easy)",
+    "ml": "Feature engineering: log transforms, binning, scaling (MinMaxScaler, StandardScaler)",
+    "dev": "FastAPI exception handlers, HTTPException, custom error responses",
+    "deploy": "Push image to Docker Hub: docker tag + docker push"
+  },
+  {
+    "d": 6,
+    "title": "Prefix Array + Sliding Window Mix | Train/Test Split | SQLite Intro",
+    "week": 1,
+    "dsa": "3 problems: Subarray Sum Equals K (Medium), Max Consecutive Ones III (Medium), Minimum Operations to Reduce to Zero (Medium)",
+    "ml": "sklearn: train_test_split, cross_val_score, pipeline basics",
+    "dev": "SQLite with SQLAlchemy: create engine, define model (ORM), create_all",
+    "deploy": "Containerize a Python script that runs ML inference"
+  },
+  {
+    "d": 7,
+    "title": "WEEK 1 REVIEW: Timed practice + revise patterns",
+    "week": 1,
+    "dsa": "5 problems: 3 Easy + 2 Medium timed (45 min total). Review all patterns from week 1.",
+    "ml": "Complete Kaggle EDA notebook, document findings, export cleaned dataset as CSV",
+    "dev": "CRUD: add GET /items, POST /items, DELETE /items with SQLite",
+    "deploy": "Run full Docker workflow: build → run → push. Review docker-compose file."
+  },
+  {
+    "d": 8,
+    "title": "Linked List: Reverse, Merge Sorted | Linear Regression (scratch) | SQLAlchemy CRUD",
+    "week": 2,
+    "dsa": "3 problems: Reverse Linked List (Easy), Merge Two Sorted Lists (Easy), Linked List Cycle (Easy)",
+    "ml": "Linear Regression from scratch: cost function, gradient descent, vectorized form in NumPy",
+    "dev": "SQLAlchemy: create_item, get_item, update_item, delete_item ORM functions",
+    "deploy": "Add DB to Docker Compose with volume persistence"
+  },
+  {
+    "d": 9,
+    "title": "Linked List: Advanced | Linear Regression sklearn | FastAPI + DB endpoint",
+    "week": 2,
+    "dsa": "3 problems: Remove Nth Node From End (Medium), Add Two Numbers (Medium), LRU Cache (Hard - study pattern)",
+    "ml": "Linear Regression with sklearn: fit, predict, MSE, R² score. Plot actual vs predicted.",
+    "dev": "Wire SQLAlchemy CRUD to FastAPI endpoints, test with Postman / Swagger UI",
+    "deploy": "Environment variables in Docker: .env file + docker-compose env_file"
+  },
+  {
+    "d": 10,
+    "title": "Stack: Valid Parens, Next Greater | Logistic Regression | JWT Auth Part 1",
+    "week": 2,
+    "dsa": "3 problems: Valid Parentheses (Easy), Next Greater Element I (Medium), Daily Temperatures (Medium)",
+    "ml": "Logistic Regression: sigmoid function, cross-entropy loss, classification on Titanic dataset",
+    "dev": "JWT: install python-jose, create access token, /login endpoint returns token",
+    "deploy": "Multi-stage Docker build to reduce image size"
+  },
+  {
+    "d": 11,
+    "title": "Stack Advanced + Monotonic Stack | Logistic Regression Evaluation | JWT Auth Part 2",
+    "week": 2,
+    "dsa": "3 problems: Largest Rectangle in Histogram (Hard), Trapping Rain Water (Hard - study), Asteroid Collision (Medium)",
+    "ml": "Evaluation: confusion matrix, precision, recall, F1-score, ROC curve, AUC with sklearn",
+    "dev": "JWT: protect routes with Depends(get_current_user), /me endpoint",
+    "deploy": "docker logs, docker exec -it, docker inspect — debugging containers"
+  },
+  {
+    "d": 12,
+    "title": "Queue, Deque | Decision Trees | User Registration + Password Hashing",
+    "week": 2,
+    "dsa": "3 problems: Implement Queue Using Stacks (Easy), Sliding Window Maximum (Hard - study), Design Circular Queue (Medium)",
+    "ml": "Decision Tree: Gini impurity, information gain, sklearn DecisionTreeClassifier, visualize tree with export_graphviz",
+    "dev": "User model in DB, register endpoint, bcrypt password hashing (passlib)",
+    "deploy": "Health check endpoint, Docker HEALTHCHECK instruction"
+  },
+  {
+    "d": 13,
+    "title": "Binary Search: On Answer | Random Forest | Full Auth Flow",
+    "week": 2,
+    "dsa": "3 problems: Koko Eating Bananas (Medium), Capacity to Ship Packages (Medium), Find Peak Element (Medium)",
+    "ml": "Random Forest: bagging, n_estimators, feature_importances_, compare RF vs DT on same dataset",
+    "dev": "Complete auth: register → login → protected route. Test full flow.",
+    "deploy": "Docker networks: bridge, host. Link containers by name."
+  },
+  {
+    "d": 14,
+    "title": "WEEK 2 REVIEW + 50-problem milestone | ML Model Serialization",
+    "week": 2,
+    "dsa": "4 problems timed: 2 Medium + 2 Easy. Review LL + Stack + Queue + Binary Search patterns.",
+    "ml": "Model saving: joblib.dump / pickle.dump. Load model and run inference. Test serialization.",
+    "dev": "Add /predict POST endpoint: accept input JSON → load model → return prediction",
+    "deploy": "Complete Dockerized app: FastAPI + auth + SQLite + ML inference endpoint"
+  },
+  {
+    "d": 15,
+    "title": "Binary Tree: Traversals | Model Evaluation Deep Dive | Async FastAPI",
+    "week": 3,
+    "dsa": "3 problems: Binary Tree Inorder Traversal (Easy), Binary Tree Level Order Traversal (Medium), Zigzag Level Order (Medium)",
+    "ml": "Cross-validation: KFold, StratifiedKFold, GridSearchCV for hyperparameter tuning",
+    "dev": "Async/await in FastAPI: async def endpoints, async DB calls with databases lib",
+    "deploy": "Docker Compose with 2 services: web + redis. Test inter-service communication."
+  },
+  {
+    "d": 16,
+    "title": "BST: Insert, Delete, Validate | Feature Pipelines | Background Tasks",
+    "week": 3,
+    "dsa": "3 problems: Validate Binary Search Tree (Medium), Lowest Common Ancestor BST (Medium), Kth Smallest in BST (Medium)",
+    "ml": "sklearn Pipeline: chain preprocessing + model. ColumnTransformer for mixed types.",
+    "dev": "FastAPI BackgroundTasks: send email after registration (mock), log predictions async",
+    "deploy": "Dockerfile best practices: .dockerignore, layer caching, non-root user"
+  },
+  {
+    "d": 17,
+    "title": "Tree: DFS patterns | XGBoost | PostgreSQL Setup",
+    "week": 3,
+    "dsa": "3 problems: Maximum Depth of Binary Tree (Easy), Path Sum II (Medium), Binary Tree Right Side View (Medium)",
+    "ml": "Gradient Boosting with XGBoost: fit, predict, early stopping, plot feature importance",
+    "dev": "Switch from SQLite to PostgreSQL. Update connection string, test CRUD.",
+    "deploy": "PostgreSQL in Docker Compose with persistent volume"
+  },
+  {
+    "d": 18,
+    "title": "Tree: BFS + Advanced | KNN + SVM | Alembic Migrations",
+    "week": 3,
+    "dsa": "3 problems: Populating Next Right Pointers (Medium), Serialize/Deserialize Tree (Hard - study), Symmetric Tree (Easy)",
+    "ml": "KNN classifier on Iris. SVM (kernel trick intuition). When to use which?",
+    "dev": "Alembic: init, create migration, upgrade/downgrade DB schema",
+    "deploy": "Run migrations in Docker entrypoint script before app starts"
+  },
+  {
+    "d": 19,
+    "title": "Tree: LCA, Diameter, Max Path | Unsupervised Learning | File Uploads",
+    "week": 3,
+    "dsa": "3 problems: Lowest Common Ancestor Binary Tree (Medium), Diameter of Binary Tree (Easy), Binary Tree Maximum Path Sum (Hard)",
+    "ml": "K-Means clustering (elbow method), PCA for dimensionality reduction, visualize clusters",
+    "dev": "FastAPI file uploads: UploadFile, save to disk, return file URL",
+    "deploy": "Mount volumes in Docker for uploaded files persistence"
+  },
+  {
+    "d": 20,
+    "title": "Trie + Tree Mix | Complete ML Project Pipeline | Pagination + Filtering",
+    "week": 3,
+    "dsa": "3 problems: Implement Trie (Medium), Word Search II (Hard - study pattern), Design Add and Search Words (Medium)",
+    "ml": "Full pipeline: raw data → clean → feature engineer → train → evaluate → save. Document all steps.",
+    "dev": "Pagination in FastAPI: skip/limit params. Filter endpoints by query params.",
+    "deploy": "Docker image layers analysis: docker history, optimize image size"
+  },
+  {
+    "d": 21,
+    "title": "WEEK 3 REVIEW + 80-problem milestone | Project 1 API + Docker",
+    "week": 3,
+    "dsa": "5 problems timed: 2 Easy + 3 Medium. Pattern review: Trees. Identify weak spots.",
+    "ml": "Wrap up ML section. Write a one-page summary of every algorithm: use case, pros, cons.",
+    "dev": "Complete Project 1 API: all endpoints tested, Swagger docs clean",
+    "deploy": "Project 1 Dockerized: docker-compose up → full working system"
+  },
+  {
+    "d": 22,
+    "title": "Heaps: Kth Largest, Top K | Ensemble Methods | Deploy to Render",
+    "week": 4,
+    "dsa": "3 problems: Kth Largest Element in Array (Medium), Top K Frequent Elements (Medium), Find Median from Data Stream (Hard - study)",
+    "ml": "Voting classifier, Stacking, Blending — ensemble strategies. Train stacked model.",
+    "dev": "Add /predict endpoint to Project 1. Add input validation.",
+    "deploy": "Deploy Project 1 to Render: connect GitHub, set env vars, live URL"
+  },
+  {
+    "d": 23,
+    "title": "Heaps Advanced | Imbalanced Data | Rate Limiting",
+    "week": 4,
+    "dsa": "3 problems: Task Scheduler (Medium), K Closest Points to Origin (Medium), Merge K Sorted Lists (Hard)",
+    "ml": "Imbalanced datasets: SMOTE, class_weight='balanced', undersample. Compare strategies.",
+    "dev": "FastAPI rate limiting with slowapi. Add request logging middleware.",
+    "deploy": "Render custom domain, environment secrets, auto-deploy on git push"
+  },
+  {
+    "d": 24,
+    "title": "Intervals | Model Monitoring Basics | Caching with Redis",
+    "week": 4,
+    "dsa": "3 problems: Merge Intervals (Medium), Insert Interval (Medium), Non-Overlapping Intervals (Medium)",
+    "ml": "Concept drift, data drift intuition. Log predictions to DB for monitoring.",
+    "dev": "Redis caching in FastAPI: cache ML predictions (TTL-based). Reduce inference latency.",
+    "deploy": "Add Redis to Docker Compose. Test cache hit vs miss."
+  },
+  {
+    "d": 25,
+    "title": "Backtracking: Subsets, Permutations | ML Project 1 Polish | API Testing",
+    "week": 4,
+    "dsa": "3 problems: Subsets (Medium), Permutations (Medium), Combination Sum (Medium)",
+    "ml": "Improve Project 1 model: feature engineering, hyperparameter tuning, increase accuracy by ≥5%",
+    "dev": "pytest for FastAPI: test all endpoints. Use TestClient. Aim >80% coverage.",
+    "deploy": "GitHub Actions: run pytest on every push. Basic CI pipeline."
+  },
+  {
+    "d": 26,
+    "title": "Backtracking Advanced | ML Documentation | Swagger + OpenAPI Polish",
+    "week": 4,
+    "dsa": "3 problems: N-Queens (Hard - study), Letter Combinations Phone Number (Medium), Word Search (Medium)",
+    "ml": "Write model card: dataset description, model accuracy, limitations, usage instructions",
+    "dev": "Add response_model, description, examples to every FastAPI endpoint",
+    "deploy": "Add Docker health check. Monitor container logs in Render."
+  },
+  {
+    "d": 27,
+    "title": "Greedy: Activity Selection, Jump Game | EDA Dashboard | PostgreSQL Optimization",
+    "week": 4,
+    "dsa": "3 problems: Jump Game (Medium), Jump Game II (Medium), Gas Station (Medium)",
+    "ml": "Build a simple Streamlit dashboard for Project 1: input form → call API → show prediction",
+    "dev": "DB indexing: add index to frequently queried columns. EXPLAIN ANALYZE a slow query.",
+    "deploy": "Streamlit app in Docker. Two-service compose: API + Streamlit UI."
+  },
+  {
+    "d": 28,
+    "title": "Greedy Advanced + Bit Manipulation Intro | Streamlit Polish | Full Integration Test",
+    "week": 4,
+    "dsa": "3 problems: Hand of Straights (Medium), Partition Labels (Medium), Single Number (Easy)",
+    "ml": "Polish Streamlit app. Add confidence score display, input validation, error messages.",
+    "dev": "Integration test: start Docker Compose, test all endpoints end-to-end with httpx",
+    "deploy": "Project 1 LIVE: Render URL + Streamlit + PostgreSQL + Redis. Share link."
+  },
+  {
+    "d": 29,
+    "title": "Bit Manipulation | Project 1 Documentation | Resume Update",
+    "week": 4,
+    "dsa": "3 problems: Number of 1 Bits (Easy), Reverse Bits (Easy), Missing Number (Easy), Counting Bits (Easy — do all 4)",
+    "ml": "Kaggle notebook of Project 1 published. LinkedIn post with project link drafted.",
+    "dev": "README.md: architecture diagram, installation steps, API docs, screenshots",
+    "deploy": "Write deployment guide in README. Check all env vars are documented."
+  },
+  {
+    "d": 30,
+    "title": "MONTH 1 REVIEW — 110 problems | Project 1 Complete | Plan Month 2",
+    "week": 4,
+    "dsa": "6 timed problems (1.5 hrs). Mock OA simulation. Score yourself. Note all mistakes.",
+    "ml": "Review every ML algorithm. List concepts where confidence < 7/10. Fill gaps.",
+    "dev": "Project 1 on GitHub with complete README, live URL, tech stack badges",
+    "deploy": "Month 1 deployment recap: Docker, Docker Hub, Render, GitHub Actions"
+  },
+  {
+    "d": 31,
+    "title": "Graph: BFS, Shortest Path | PyTorch Tensors | Docker Advanced",
+    "week": 5,
+    "dsa": "3 problems: Number of Islands (Medium), Rotting Oranges (Medium), Clone Graph (Medium)",
+    "ml": "PyTorch: tensor creation, operations, CUDA check, autograd basics (requires_grad, .backward())",
+    "dev": "Async database calls: SQLAlchemy 2.0 async. Improve Project 1 API response time.",
+    "deploy": "Docker multi-stage build for Python ML app. Slim final image."
+  },
+  {
+    "d": 32,
+    "title": "Graph: DFS, Connected Components | PyTorch nn.Module | PostgreSQL Advanced",
+    "week": 5,
+    "dsa": "3 problems: Pacific Atlantic Water Flow (Medium), Number of Provinces (Medium), Course Schedule (Medium)",
+    "ml": "nn.Module: define layers in __init__, forward pass. Build MLP. Train on tabular data.",
+    "dev": "PostgreSQL: JOIN queries, aggregate functions, subqueries. Run in Docker.",
+    "deploy": "docker stats, docker top — monitor resource usage. Set memory limits."
+  },
+  {
+    "d": 33,
+    "title": "Union-Find | PyTorch Training Loop | Project 2 Planning",
+    "week": 5,
+    "dsa": "3 problems: Redundant Connection (Medium), Graph Valid Tree (Medium), Number of Connected Components (Medium)",
+    "ml": "Full PyTorch training loop: DataLoader, loss (CrossEntropyLoss), Adam optimizer, epochs, accuracy tracking, plot loss curve",
+    "dev": "Plan Project 2 architecture: endpoints, DB schema, ML model choice, tech stack",
+    "deploy": "Docker Compose for Project 2: sketch out services needed"
+  },
+  {
+    "d": 34,
+    "title": "Topological Sort | MNIST Neural Net | Project 2 DB Setup",
+    "week": 5,
+    "dsa": "3 problems: Course Schedule II (Medium), Alien Dictionary (Hard - study), Sequence Reconstruction (Medium)",
+    "ml": "Build and train NN on MNIST. Target ≥98% accuracy. Use dropout for regularization.",
+    "dev": "Project 2: create FastAPI app scaffold, DB models, Alembic migrations",
+    "deploy": "Set up GitHub repo for Project 2 with .github/workflows/ci.yml"
+  },
+  {
+    "d": 35,
+    "title": "Advanced Graph: Dijkstra | MNIST Training Polish | Project 2 API Scaffolding",
+    "week": 5,
+    "dsa": "3 problems: Network Delay Time (Medium), Cheapest Flights Within K Stops (Medium), Path with Minimum Effort (Medium)",
+    "ml": "MNIST: add learning rate scheduler (StepLR), model checkpoint (save best), confusion matrix on test set",
+    "dev": "Project 2: implement all API endpoints (stubs), add Pydantic schemas, Swagger ready",
+    "deploy": "AWS basics: create free-tier EC2, SSH in, install Docker"
+  },
+  {
+    "d": 36,
+    "title": "Graph: Bellman-Ford, Floyd-Warshall | PyTorch Model Save/Load | Project 2 Integration",
+    "week": 5,
+    "dsa": "3 problems: Find the City With Smallest Number of Neighbors (Medium), Minimum Cost to Connect Points (Medium), Swim in Rising Water (Hard)",
+    "ml": "torch.save / torch.load. Build inference function: load model → predict single input → return class + confidence",
+    "dev": "Project 2: wire ML inference into API endpoint. Test /predict route.",
+    "deploy": "Deploy Project 2 API on EC2: docker run -d -p 80:8000"
+  },
+  {
+    "d": 37,
+    "title": "WEEK 5 REVIEW — 140 problems | Graphs mastered | DL setup confirmed",
+    "week": 5,
+    "dsa": "5 timed graph problems. Use BFS/DFS/UF/Topo sort templates. Clock yourself.",
+    "ml": "PyTorch review: tensors, autograd, training loop, save/load. Write cheat sheet.",
+    "dev": "Project 2: all core routes tested. DB seeded with sample data.",
+    "deploy": "EC2 running Project 2 API. Test public IP. Check docker logs."
+  },
+  {
+    "d": 38,
+    "title": "Advanced Graphs + DSA Revision Mix | CNN Architecture | Project 2 CNN Integration",
+    "week": 6,
+    "dsa": "3 problems: Word Ladder (Hard), Bus Routes (Hard - study), Minimum Height Trees (Medium)",
+    "ml": "CNN: Conv2D → ReLU → MaxPool → Flatten → Linear. Build from scratch in PyTorch. Train on CIFAR-10.",
+    "dev": "Project 2: add image upload endpoint. Accept image, run CNN inference, return label + confidence.",
+    "deploy": "Rebuild Project 2 Docker image with CNN model weights included"
+  },
+  {
+    "d": 39,
+    "title": "DP Intro: 1D Problems | CNN Training CIFAR-10 | S3 for Model Storage",
+    "week": 6,
+    "dsa": "3 problems: Climbing Stairs (Easy), House Robber (Medium), House Robber II (Medium)",
+    "ml": "Train CNN on CIFAR-10: target >75%. Data augmentation: RandomHorizontalFlip, RandomCrop, Normalize.",
+    "dev": "Store model weights in AWS S3 (boto3). Load from S3 at startup instead of Docker image.",
+    "deploy": "boto3 in FastAPI: boto3.client('s3'), download_file at startup"
+  },
+  {
+    "d": 40,
+    "title": "DP: Unbounded Knapsack | Transfer Learning ResNet | Project 2 Transfer Learning",
+    "week": 6,
+    "dsa": "3 problems: Coin Change (Medium), Coin Change II (Medium), Integer Break (Medium)",
+    "ml": "Transfer Learning: load ResNet-18 (pretrained=True), freeze backbone, replace FC layer, fine-tune on custom 3-class dataset (≤500 images)",
+    "dev": "Update /predict to use fine-tuned ResNet. Compare accuracy: CNN from scratch vs ResNet transfer.",
+    "deploy": "Model versioning: save model with version tag. Load specific version from S3."
+  },
+  {
+    "d": 41,
+    "title": "DP: 0/1 Knapsack | NLP: Tokenization + Embeddings | Project 2 NLP Option",
+    "week": 6,
+    "dsa": "3 problems: Partition Equal Subset Sum (Medium), Target Sum (Medium), Last Stone Weight II (Medium)",
+    "ml": "NLP basics: tokenization (spaCy/NLTK), word embeddings, bag-of-words, TF-IDF for text classification",
+    "dev": "Add /classify-text endpoint: accept text → tokenize → predict sentiment → return label",
+    "deploy": "Add NLTK/spaCy model downloads to Dockerfile. Verify container boots correctly."
+  },
+  {
+    "d": 42,
+    "title": "DP: LCS, LIS | Text Classification LSTM | Background Job Queue",
+    "week": 6,
+    "dsa": "3 problems: Longest Common Subsequence (Medium), Longest Increasing Subsequence (Medium), Edit Distance (Hard)",
+    "ml": "Build LSTM text classifier in PyTorch: Embedding → LSTM → Linear. Train on IMDB dataset.",
+    "dev": "Celery + Redis: offload long ML inference to background worker. Return job_id immediately.",
+    "deploy": "Add Celery worker as 4th service in Docker Compose"
+  },
+  {
+    "d": 43,
+    "title": "DP 2D Grid | BERT Fine-tuning | Project 2 Feature Complete",
+    "week": 6,
+    "dsa": "3 problems: Unique Paths (Medium), Minimum Path Sum (Medium), Dungeon Game (Hard - study)",
+    "ml": "HuggingFace Transformers: load distilbert-base-uncased, fine-tune on classification task, push to HuggingFace Hub",
+    "dev": "Project 2: all features implemented. Final Swagger docs review. Add /health and /version endpoints.",
+    "deploy": "HuggingFace Hub: push fine-tuned model. Load from Hub in production."
+  },
+  {
+    "d": 44,
+    "title": "WEEK 6 REVIEW — 170 problems | DL complete | Project 2 deploy",
+    "week": 6,
+    "dsa": "5 problems timed mix: DP + Graph. Identify any pattern gaps.",
+    "ml": "DL review: CNN, LSTM, Transfer Learning, BERT. Write one-page DL cheat sheet.",
+    "dev": "Project 2: final integration test. All endpoints. Performance test with locust.",
+    "deploy": "Deploy Project 2 to AWS/Render. Live URL. Update GitHub README with demo."
+  },
+  {
+    "d": 45,
+    "title": "DP Advanced: String Problems | Inference Optimization | Project 3 Start",
+    "week": 7,
+    "dsa": "3 problems: Palindromic Substrings (Medium), Longest Palindromic Subsequence (Medium), Regular Expression Matching (Hard - study)",
+    "ml": "Model optimization: ONNX export, quantization basics (torch.quantization), TorchScript tracing. Compare inference speed.",
+    "dev": "Project 3 planning: recommendation system or real-time NLP API. Design schema.",
+    "deploy": "ONNX Runtime: run ONNX model via onnxruntime. Benchmark vs PyTorch."
+  },
+  {
+    "d": 46,
+    "title": "DP: Stocks, Cooldown | Batch Inference Pipeline | Project 3 Setup",
+    "week": 7,
+    "dsa": "3 problems: Best Time to Buy and Sell Stock (Easy), Best Time II (Medium), Best Time with Cooldown (Medium)",
+    "ml": "Batch inference: accept list of inputs, vectorize, run model once. Return list of predictions. Measure throughput.",
+    "dev": "Project 3: GitHub repo, Docker Compose, FastAPI scaffold, DB schema",
+    "deploy": "Nginx reverse proxy in Docker: route /api → FastAPI. Rate limiting at proxy level."
+  },
+  {
+    "d": 47,
+    "title": "DP: Game Theory | ML Deployment Patterns | Project 3 Model",
+    "week": 7,
+    "dsa": "3 problems: Burst Balloons (Hard - study), Stone Game (Medium), Predict the Winner (Medium)",
+    "ml": "Review ML deployment patterns: REST API, gRPC basics, streaming inference, model caching strategies",
+    "dev": "Project 3: implement core ML model. Train, evaluate, save. Wrap in API.",
+    "deploy": "gRPC vs REST tradeoffs. When to use each for ML serving."
+  },
+  {
+    "d": 48,
+    "title": "Intervals + DP Mix | Model Monitoring | Project 3 DB + API",
+    "week": 7,
+    "dsa": "3 problems: Strange Printer (Hard), Freedom Trail (Hard - study), Minimum Difficulty of Job Schedule (Hard)",
+    "ml": "MLflow basics: log metrics, params, artifacts. Track experiments. Compare runs.",
+    "dev": "Project 3: DB CRUD, all endpoints, Swagger docs, auth integration",
+    "deploy": "MLflow in Docker: mlflow server as separate service. Log runs from training script."
+  },
+  {
+    "d": 49,
+    "title": "Graph + DP Combination | A/B Testing Basics | Project 3 Frontend",
+    "week": 7,
+    "dsa": "3 problems: Cherry Pickup II (Hard), Minimum Cost to Cut Stick (Hard), Scramble String (Hard - study)",
+    "ml": "A/B testing concept: shadow mode, canary deployment, feature flags for model versions",
+    "dev": "Project 3: add simple Streamlit or React frontend (pick one). Connect to FastAPI.",
+    "deploy": "Deploy Project 3 frontend + API + DB on Render or EC2"
+  },
+  {
+    "d": 50,
+    "title": "Mock OA Day 1 | AI System Design | Project 3 Polish",
+    "week": 7,
+    "dsa": "FULL MOCK OA: 3 LeetCode Medium problems in 90 minutes. Record score, time, mistakes.",
+    "ml": "System design for AI: design YouTube recommendation. Data → model → serving → monitoring → feedback loop.",
+    "dev": "Project 3 final code review: clean up, add error handling, logging",
+    "deploy": "CI/CD: GitHub Actions → test → build Docker → push to registry → deploy to cloud"
+  },
+  {
+    "d": 51,
+    "title": "Mock OA Day 2 | AI Interview Prep | Resume Finalize",
+    "week": 7,
+    "dsa": "FULL MOCK OA: 2 Medium + 1 Hard in 90 minutes. Focus on explaining approach out loud.",
+    "ml": "Prepare answers for: bias-variance tradeoff, overfitting solutions, how CNN works, attention mechanism, BERT vs GPT",
+    "dev": "Update resume: quantify project impact (e.g., 'deployed ML API handling 500 req/min, 94% accuracy')",
+    "deploy": "All 3 projects: live URLs, GitHub stars, polished READMEs"
+  },
+  {
+    "d": 52,
+    "title": "WEEK 7 REVIEW — 215 problems | All Projects Live | Interview Mode ON",
+    "week": 7,
+    "dsa": "Review: all DP patterns, graph patterns. Create personal pattern cheat sheet (1 page).",
+    "ml": "3 projects reviewed: can explain architecture, model choice, metrics, deployment in 3 minutes each.",
+    "dev": "GitHub profile README created. Top 3 pinned repos = 3 AI projects.",
+    "deploy": "All deployments verified live. Record a 2-min Loom demo video for each project."
+  },
+  {
+    "d": 53,
+    "title": "DSA Revision Sprint 1: Arrays + Strings | ML Interview Qs",
+    "week": 8,
+    "dsa": "5 problems: mixed Arrays + Strings. Use 20-min limit per problem. Track if solved first try.",
+    "ml": "Interview Qs: What is regularization? L1 vs L2? How to handle overfitting? Feature selection methods?",
+    "dev": "System design: design a URL shortener. Draw components. Estimate scale.",
+    "deploy": "Review Docker commands: docker ps, exec, logs, inspect, network ls. Run through all from memory."
+  },
+  {
+    "d": 54,
+    "title": "DSA Revision Sprint 2: Trees + Graphs | DL Interview Qs",
+    "week": 8,
+    "dsa": "5 problems: Trees + Graphs mix. BFS/DFS templates written from memory.",
+    "ml": "Interview Qs: How does backpropagation work? What is vanishing gradient? How does CNN extract features? Dropout purpose?",
+    "dev": "System design: design a ML model serving platform. Load balancer, model registry, canary deploy.",
+    "deploy": "Review: Render vs EC2 vs GCP tradeoffs. Know when to recommend each."
+  },
+  {
+    "d": 55,
+    "title": "DSA Revision Sprint 3: DP | End-to-End ML System Design",
+    "week": 8,
+    "dsa": "5 DP problems: knapsack, LCS, LIS, coin change, grid. Write recurrence relation before coding.",
+    "ml": "System design: design a fraud detection system. Data pipeline → feature store → model training → serving → monitoring.",
+    "dev": "Practice explaining your Project 2 architecture in 5 minutes. Time yourself.",
+    "deploy": "Practice: deploy a fresh FastAPI app from scratch in <30 minutes. No docs."
+  },
+  {
+    "d": 56,
+    "title": "Full Mock Interview 1 | Behavioral Prep",
+    "week": 8,
+    "dsa": "Live mock: 1 Medium DSA problem on paper. Explain approach, code, test cases, complexity.",
+    "ml": "Behavioral: 'Tell me about a project you're proud of' → use Project 2. STAR format.",
+    "dev": "'Walk me through your system design for [Project 2].' Practice 5-min pitch.",
+    "deploy": "'How would you scale this API to 100x traffic?' — Know the answer for all 3 projects."
+  },
+  {
+    "d": 57,
+    "title": "DSA Revision Sprint 4: Weak Spots | AI Concepts Deep Dive",
+    "week": 8,
+    "dsa": "5 problems: ONLY from your weak topics list. No comfortable topics today.",
+    "ml": "Deep dive: Attention mechanism (self-attention, multi-head). Transformer architecture. Why BERT is bidirectional.",
+    "dev": "SQL revision: JOIN types, GROUP BY, HAVING, window functions, indexes",
+    "deploy": "K8s basics (conceptual only): pod, service, deployment, why it's used for ML serving"
+  },
+  {
+    "d": 58,
+    "title": "Full Mock Interview 2 | Company Research",
+    "week": 8,
+    "dsa": "Mock OA: 3 problems in 90 min, timed strictly. Peer review or self-review.",
+    "ml": "Research target companies: what AI/ML products do they build? What stack do they use?",
+    "dev": "Practice system design: design a recommendation engine at Netflix scale.",
+    "deploy": "Final check: all GitHub repos, live URLs, Loom videos, LinkedIn."
+  },
+  {
+    "d": 59,
+    "title": "Final Timed LeetCode Session | Interview Qs Blitz",
+    "week": 8,
+    "dsa": "10 problems: 5 Easy (under 10 min each) + 5 Medium (under 25 min each). Simulate competition mode.",
+    "ml": "60-question AI/ML/DL rapid fire: answer in 1–2 sentences each. No looking up.",
+    "dev": "Final resume review: no typos, all links work, concise bullet points.",
+    "deploy": "Deployment final check: all 3 projects live. No 404s. Swagger docs accessible."
+  },
+  {
+    "d": 60,
+    "title": "DAY 60: Final Review, Rest, Mindset Reset",
+    "week": 8,
+    "dsa": "Light: review your own pattern cheat sheet only. No new problems.",
+    "ml": "Read your own DL and ML cheat sheets. Confidence-building, not cramming.",
+    "dev": "Finalize application materials. Draft personalized cover notes for top 5 companies.",
+    "deploy": "Celebrate: you built and deployed 3 AI projects, solved 250+ DSA problems, and are placement-ready."
+  }
+]
