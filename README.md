@@ -1,103 +1,66 @@
-# 60-Day Hacker Tracker: Elite Placement Preparation System
+# 🚀 60-Day Hacker Tracker: Elite Silicon Valley Prep
 
-A production-ready gamified 60-day curriculum tracker built with the modern stack:
-Next.js (App Router), Tailwind CSS v4, FastAPI, PostgreSQL, and Docker.
+A production-ready, gamified 60-day performance tracking system designed for top-tier placement preparation. Built with an elite tech stack focused on speed, aesthetic, and scalability.
 
-## Project Structure
-```text
-/
-├── backend/
-│   ├── app/
-│   │   ├── main.py        - FastAPI Application
-│   │   ├── models.py      - SQLAlchemy DB Models
-│   │   ├── schemas.py     - Pydantic Schemas
-│   │   ├── routers/       - auth.py, tracker.py
-│   │   └── utils/         - Gamification logic + JWT
-│   ├── scripts/
-│   │   └── seed.py        - Seed the DB with 60 Days JSON
-│   ├── Dockerfile
-│   └── requirements.txt
-├── frontend/
-│   ├── src/
-│   │   ├── app/           - Next.js Routes (page.tsx, dashboard, tracker, etc.)
-│   │   ├── components/    - Reusable UI (Navbar.tsx)
-│   │   └── lib/           - API client and Auth context
-│   ├── Dockerfile
-│   └── package.json
-└── docker-compose.yml
-```
+![Roadmap Preview](https://raw.githubusercontent.com/nishantrs0404/60-day-hacker-tracker/main/frontend/public/globe.svg) *Project uses a high-performance Neon/Vercel/Render architecture.*
 
-## Setup Instructions
+## ✨ Key Features
 
-### Environment Variables (.env)
-You do not strictly need a `.env` to run this locally via Docker, as `docker-compose.yml` provides the defaults. However, for production deployment, create `.env` in the backend root:
-```env
-DATABASE_URL=postgresql://user:pass@db:5432/mydb
-SECRET_KEY=your_highly_secure_secret_key
-ALGORITHM=HS256
-ACCESS_TOKEN_EXPIRE_MINUTES=1440
-```
-And in `frontend/.env.local` for local dev (if not using docker):
-```env
-NEXT_PUBLIC_API_URL=http://localhost:8000/api
-```
+- **🎮 Gamified Progress**: Earn XP, level up (Lv1 - Lv10), and maintain streaks as you complete daily tasks.
+- **🔒 Daily Execution Protocol**: 60-day curriculum with locked/unlocked progress logic to keep you focused.
+- **📖 Full Roadmap Preview**: A separate read-only view of the entire 60-day plan (DSA, ML, Dev, Deploy) with search and week-based filters.
+- **📊 Real-time Analytics**: Cumulative velocity tracking and performance visualizations.
+- **🔐 Secure Authentication**: JWT-based auth with enterprise-grade password hashing (bcrypt).
+- **📱 Responsive Glassmorphism UI**: Stunning dark-mode dashboard optimized for all devices.
 
-### Run Locally with Docker
-Ensure Docker Desktop is running, then execute:
+## 🛠️ Tech Stack
+
+- **Frontend**: [Next.js 16 (App Router)](https://nextjs.org/) + [Tailwind CSS v4](https://tailwindcss.com/)
+- **Backend**: [FastAPI (Python 3.11)](https://fastapi.tiangolo.com/) + [SQLAlchemy](https://www.sqlalchemy.org/)
+- **Database**: [PostgreSQL](https://www.postgresql.org/) (Cloud-ready with [Neon](https://neon.tech))
+- **Deployment**: [Docker](https://www.docker.com/) + Docker Compose
+
+---
+
+## 🚀 Quick Start
+
+### 1. Requirements
+- Docker & Docker Compose installed.
+
+### 2. Launch
+Clone and run in a single command:
 ```bash
 docker-compose up -d --build
 ```
-This single command spins up PostgreSQL, FastAPI Backend, Next.js Frontend, and automatically runs the database seeding script for the entire 60 days.
+This command automatically builds the environment and seeds the 60-day curriculum.
 
-- **Frontend Application**: `http://localhost:3000`
-- **FastAPI Backend Swagger Docs**: `http://localhost:8000/docs`
-
----
-
-## Deployment Strategy (MANDATORY REQUIREMENT)
-
-### Database: Supabase / Neon
-1. Create a free Postgres database on [Neon.tech](https://neon.tech/) or [Supabase](https://supabase.com).
-2. Note the generated `DATABASE_URL` for your Backend deployment.
-
-### Backend: Render / Railway
-1. Push this repository to GitHub.
-2. Sign up on [Render.com](https://render.com/).
-3. Click "New Web Service" -> connect your GitHub repo.
-4. Set Root Directory to `backend/`.
-5. Environment: Docker or Python (Docker recommended since Dockerfile is provided).
-6. Set Environment Variables:
-   - `DATABASE_URL` = (From Supabase / Neon)
-   - `SECRET_KEY` = (A secure random string)
-7. Deploy. Note your live backend URL (e.g., `https://hacker-api.onrender.com`).
-
-### Frontend: Vercel
-1. Go to [Vercel.com](https://vercel.com/) and click "Add New Project".
-2. Select your GitHub repository.
-3. Set the "Framework Preset" to Next.js.
-4. Set the Root Directory to `frontend/`.
-5. Set Environment Variable:
-   - `NEXT_PUBLIC_API_URL` = `https://hacker-api.onrender.com/api` (Your Render URL).
-6. Deploy.
+### 3. Access
+- **Frontend**: [http://localhost:3000](http://localhost:3000)
+- **API Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ---
 
-## API Endpoints List
+## 📂 Project Architecture
+```text
+/
+├── backend/            # FastAPI Project
+│   ├── app/            # Core logic (Auth, Tracker, Gamification)
+│   ├── scripts/        # Seeding logic
+│   └── roadmap.json    # The 60-day curiculum
+├── frontend/           # Next.js 16 Project
+│   └── src/app/        # Dashboard, Roadmap, Tracker routes
+└── docker-compose.yml  # Full-stack orchestration
+```
 
-### Auth (`/api/auth`)
-- `POST /register`: Create a new user account.
-- `POST /login`: Authenticate and receive a JWT token (Form Data).
-- `GET /me`: Get current logged-in user details.
-
-### Tracker (`/api/tracker`)
-- `GET /days`: Get all 60 days of the roadmap + user's current progress.
-- `GET /days/{day_number}`: Get a specific day's tasks + progress.
-- `POST /progress/{day_number}`: Update a day's progress (dsa, ml, dev, deploy completions). Automatically calculates and updates the gamified XP and levels on completion.
+## 🌐 Deployment Plan
+1. **Database**: Link a free [Neon PostgreSQL](https://neon.tech) instance.
+2. **Backend**: Deploy the `backend/` folder to [Render](https://render.com) using the provided Dockerfile.
+3. **Frontend**: Deploy the `frontend/` folder to [Vercel](https://vercel.com) with the `NEXT_PUBLIC_API_URL` pointing to your Render backend.
 
 ---
 
-## Advanced Gamification Features
-1. **Experience (XP)**: +100 for each completed day.
-2. **Streak Tracking**: Continuous completion triggers streak bonuses.
-3. **Levels**: User scales from Lv1 to Lv10 based on XP thresholds (e.g., Lv2 at 200 XP).
-4. **Analytics**: Cumulative velocity and area charts provided directly in the tracker.
+## 🤝 Contribution
+The project is optimized for high-velocity development. Ensure all changes are containerized and verified via the Docker compose environment before pushing.
+
+---
+*Created by [Nishant Raushan](https://github.com/nishantrs0404).*
