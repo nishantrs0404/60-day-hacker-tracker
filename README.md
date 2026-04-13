@@ -1,74 +1,97 @@
-# 🚀 60-Day Hacker Tracker: Elite Silicon Valley Prep
+# 🚀 60-Day Hacker Tracker: Elite Performance System
 
-A production-ready, gamified 60-day performance tracking system designed for top-tier placement preparation. Built with an elite tech stack focused on speed, aesthetic, and scalability.
+[![GitHub License](https://img.shields.io/github/license/nishantrs0404/60-day-hacker-tracker?style=flat-square&color=blue)](https://github.com/nishantrs0404/60-day-hacker-tracker/blob/main/LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/nishantrs0404/60-day-hacker-tracker?style=flat-square)](https://github.com/nishantrs0404/60-day-hacker-tracker/stargazers)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs)](https://nextjs.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+
+A premium, full-stack execution protocol designed for elite technical placement preparation. This system combines gamified psychology with a rigorous 60-day curriculum to ensure consistent high-performance output.
 
 ---
 
-## 📸 Visual Overview
+## 📸 System Interface
 
-### Main Dashboard
-![Dashboard](docs/assets/dashboard.png)
-*Track your XP, Level, and Current Streaks in a sleek dark-mode glassmorphism interface.*
+| **Executive Dashboard** | **Execution Protocol** |
+|:---:|:---:|
+| ![Dashboard](docs/assets/dashboard.png) | ![Tracker](docs/assets/tracker.png) |
+| *Real-time XP, Levels, and Streak Tracking.* | *Locked progression system to maintain focus.* |
 
-### 60-Day Execution Plan
-![Tracker](docs/assets/tracker.png)
-*Execute your daily protocol with a locked/unlocked system that keeps you disciplined.*
-
-### Full Roadmap Preview
+### 📖 Curriculum Roadmap
 ![Roadmap](docs/assets/roadmap.png)
-*Browse the entire 60-day curriculum with advanced filters and search capabilities.*
+*A searchable, filtered architectural view of the entire 60-day syllabus.*
 
 ---
 
-## ✨ Key Features
+## 💎 Core Value Proposition
 
-- **🎮 Gamified Progress**: Earn XP, level up (Lv1 - Lv10), and maintain streaks as you complete daily tasks.
-- **🔒 Daily Execution Protocol**: 60-day curriculum with locked/unlocked progress logic to keep you focused.
-- **📖 Full Roadmap Preview**: A separate read-only view of the entire 60-day plan (DSA, ML, Dev, Deploy) with search and week-based filters.
-- **📊 Real-time Analytics**: Cumulative velocity tracking and performance visualizations.
-- **🔐 Secure Authentication**: JWT-based auth with enterprise-grade password hashing (bcrypt).
-- **📱 Responsive Glassmorphism UI**: Stunning dark-mode dashboard optimized for all devices.
-
-## 🛠️ Tech Stack
-
-- **Frontend**: [Next.js 16 (App Router)](https://nextjs.org/) + [Tailwind CSS v4](https://tailwindcss.com/)
-- **Backend**: [FastAPI (Python 3.11)](https://fastapi.tiangolo.com/) + [SQLAlchemy](https://www.sqlalchemy.org/)
-- **Database**: [PostgreSQL](https://www.postgresql.org/) (Cloud-ready with [Neon](https://neon.tech))
-- **Deployment**: [Docker](https://www.docker.com/) + Docker Compose
+- **🧠 Cognitive Gamification**: Leverages XP-based leveling (Lv1 - Lv10) and streak mechanics to optimize dopamine loops for learning.
+- **🔒 Disciplined Execution**: A strictly sequentially unlocked tracker ensures that foundational concepts are mastered before advanced architectures are explored.
+- **📱 High-End DX/UX**: A state-of-the-art dark mode interface featuring glassmorphism, smooth Framer Motion animations, and responsive layouts.
+- **📊 Performance Analytics**: Integrated velocity charts to monitor daily execution consistency.
 
 ---
 
-## 🚀 Quick Start
+## 🏗️ Technical Architecture
 
-### 1. Requirements
-- Docker & Docker Compose installed.
+```mermaid
+graph TD
+    User((User)) -->|HTTPS| Frontend[Next.js Frontend]
+    Frontend -->|JWT Auth| Backend[FastAPI Backend]
+    Backend -->|SQLAlchemy| DB[(PostgreSQL / Neon)]
+    Backend -->|JSON| Roadmap[Roadmap Logic]
+```
 
-### 2. Launch
-Clone and run in a single command:
+### Backend Foundation
+- **FastAPI**: Asynchronous Python framework for high-concurrency API performance.
+- **SQLAlchemy & Alembic**: Robust ORM and migration management for the PostgreSQL schema.
+- **Passlib (Bcrypt)**: Industry-standard password hashing and security.
+
+### Frontend Foundation
+- **Next.js 16**: Utilizing App Router and Server Components for optimal SEO and performance.
+- **Tailwind CSS v4**: Modern, utility-first styling with custom glassmorphism components.
+- **Lucide React**: Clean, consistent iconography throughout the system.
+
+---
+
+## 🚀 Deployment & Local Setup
+
+### Unified Docker Launch
+The entire stack is containerized for "One-Command Deployment":
+
 ```bash
 docker-compose up -d --build
 ```
-This command automatically builds the environment and seeds the 60-day curriculum.
 
-### 3. Access
-- **Frontend**: [http://localhost:3000](http://localhost:3000)
-- **API Docs**: [http://localhost:8000/docs](http://localhost:8000/docs)
+### Access Points
+- **System Portal**: `http://localhost:3000`
+- **Interactive Documentation**: `http://localhost:8000/docs`
+- **Database Explorer**: `http://localhost:5432` (via Docker)
+
+---
+
+## 📜 API Specification Summary
+
+### Authentication Layer
+| Endpoint | Method | Purpose |
+|:---|:---:|:---|
+| `/api/auth/register` | `POST` | Account creation |
+| `/api/auth/login` | `POST` | Secure JWT acquisition |
+| `/api/auth/me` | `GET` | Recursive identity check |
+
+### Execution Layer
+| Endpoint | Method | Purpose |
+|:---|:---:|:---|
+| `/api/tracker/days` | `GET` | Retrieve 60-day protocol state |
+| `/api/tracker/progress/{id}`| `POST`| Commit daily execution results |
 
 ---
 
-## 📂 Project Architecture
-```text
-/
-├── backend/            # FastAPI Project
-├── frontend/           # Next.js 16 Project
-├── docs/assets/        # App screenshots
-└── docker-compose.yml  # Full-stack orchestration
-```
-
-## 🌐 Deployment Plan
-1. **Database**: Link a free [Neon PostgreSQL](https://neon.tech) instance.
-2. **Backend**: Deploy the `backend/` folder to [Render](https://render.com) using the provided Dockerfile.
-3. **Frontend**: Deploy the `frontend/` folder to [Vercel](https://vercel.com) with the `NEXT_PUBLIC_API_URL` pointing to your Render backend.
+## 🌐 Enterprise Deployment
+This project is engineered for cloud-native deployment:
+1. **Database**: [Neon.tech](https://neon.tech) (Serverless Postgres).
+2. **Backend**: [Render](https://render.com) (Docker Web Services).
+3. **Frontend**: [Vercel](https://vercel.com) (Edge-optimized hosting).
 
 ---
-*Created by [Nishant Raushan](https://github.com/nishantrs0404).*
+*Developed by **[Nishant Raushan](https://github.com/nishantrs0404)** to redefine technical preparation standards.*
