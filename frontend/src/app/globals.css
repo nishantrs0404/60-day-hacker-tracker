@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --color-root-bg: #0f0f0f;
+  --color-card-bg: rgba(22, 22, 22, 0.7);
+  --color-card-border: #2a2a2a;
+
+  --color-neon-blue: #3b82f6;
+  --color-neon-green: #22c55e;
+  --color-neon-purple: #a855f7;
+  --color-neon-amber: #f59e0b;
+  --color-neon-teal: #14b8a6;
+
+  --font-mono: "Fira Code", "Courier New", monospace;
+
+  --background: #0f0f0f;
+  --foreground: #e8e8e8;
+  --card: #161616;
+  --card-foreground: #e8e8e8;
+  --border: #2a2a2a;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --muted: #252525;
+  --muted-foreground: #a0a0a0;
+  --accent: #22c55e;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+body ::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-card {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 300ms;
+}
+
+.glass-card:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Neon glow effects */
+.neon-text-blue {
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+}
+.neon-text-green {
+  text-shadow: 0 0 10px rgba(34, 197, 94, 0.5), 0 0 20px rgba(34, 197, 94, 0.3);
+}
+.neon-text-purple {
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5), 0 0 20px rgba(168, 85, 247, 0.3);
+}
+.neon-text-amber {
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.5), 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Terminal style */
+.terminal-text {
+  font-family: var(--font-mono);
+  letter-spacing: -0.025em;
+}
+
+/* Custom Scrollbar for Hacker Vibe */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
